@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZNH</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+
+
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff8f0;
+color:#222;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+/* NAVBAR */
+header{
+background:white;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 0;
+}
+
+.logo img{
+width:80px;
+height:80px;
+object-fit:contain;
+}
+
+.menu-btn{
+font-size:24px;
+background:none;
+border:none;
+cursor:pointer;
+}
+
+#menu{
+display:none;
+flex-direction:column;
+background:white;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+padding:20px;
+}
+
+#menu a{
+text-decoration:none;
+color:#333;
+margin-bottom:10px;
+}
+
+#menu.active{
+display:flex;
+}
+
+/* BUTTON */
+.btn-primary{
+background:#f29d8d;
+color:white !important;
+border:none
+padding:10px 18px;
+border-radius:20px;
+text-decoration:none;
+display:inline-flex;
+align-items:center;
+justify-contentleft;  
+}
+
+
+/* HERO */
+.hero{
+height:400px;
+background:url('dashboard.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero-buttons{
+margin-top:20px;
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+/* MENU */
+.products{
+padding:60px 0;
+text-align:center;
+}
+
+.cards{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.price-row{
+display:flex;
+justify-content:space-between;
+margin-top:10px;
+}
+
+/* LOCATION */
+.location{
+padding:60px 0;
+text-align:center;
+}
+
+/* CONTACT */
+#contact{
+padding:60px 0;
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+background:#0a0a0a;
+color:white;
+text-align:center;
+padding:20px;h
+}
+
+/* DESKTOP */
+@media(min-width:768px){
+
+.menu-btn{
+display:none;
+}
+
+#menu{
+display:flex !important;
+position:static;
+flex-direction:row;
+gap:20px;
+padding:0;
+}
+
+.cards{
+flex-direction:row;
+flex-wrap:wrap;
+}
+
+.card{
+width:30%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<div class="logo">
+<img src="brandlogo.png">
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<div id="menu">
+<a href="#menu-section" onclick="toggleMenu()">Product</a>
+<a href="#location" onclick="toggleMenu()">Location</a>
+<a href="#contact" onclick="toggleMenu()">Contact</a>
+<a href="https://wa.me/6289505225604" 
+  target="_blank"  
+  rel="noopener noreferrer"
+  class="btn-primary">Shop Now</a>
+</div>
+
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+
+
+
+<h1>ELEVATE YOUR <br>EVERY DAY</h1>
+<p>Discover curated styles, and essential beauty designed for a modern life</p>
+
+<div class="hero-buttons">
+<a href="https://wa.me/6289505225604" 
+  target="_blank"  
+  rel="noopener noreferrer"
+  class="btn-primary">Shop the Collection</a>
+
+</div>
+
+</div>
+</section>
+
+<!-- MENU -->
+<section class="products" id="menu-section">
+<div class="container">
+
+<h2>Product Highlight</h2>
+
+<div class="cards"> 
+
+<div class="card">
+<img src="image1.jpg">
+<h3>Sand Linen Dress</h3>
+<div class="price-row">
+<span>Rp.200.000,-</span>
+<a href="https://s.shopee.co.id/1Lbfm73hHd" 
+  target="_blank"  
+  rel="noopener noreferrer"
+  class="btn-primary">Shop</a>
+</div>
+</div>
+
+<div class="card">
+<img src="image2.jpg">
+<h3>Terracotta Linen Co-ord</h3>
+<div class="price-row">
+<span>Rp.250.000,-</span>
+<a href="https://s.shopee.co.id/AAD4IPldjc"
+  target="_blank"  
+  rel="noopener noreferrer"
+  class="btn-primary">Shop</a>
+</div>
+</div>
+
+<div class="card">
+<img src="image3.jpg">
+<h3>Olive Linen Maxi Dress</h3>
+<div class="price-row">
+<span>Rp.220.000,-</span>
+<a href="
+https://s.shopee.co.id/9fGnhYGzZQ"
+  target="_blank"  
+  rel="noopener noreferrer"
+  class="btn-primary">Shop</a>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<section class="location" id="location">
+<div class="container">
+
+<h2>Location</h2>
+<p>Grand Indonesia East Mall, Jl. M.H. Thamrin No.1 Lt.5, Menteng, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta</p>
+
+<br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.520222105266!2d106.81829423847616!3d-6.19487956071454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f421acdc7113%3A0x397a514e93ba52bd!2sGrand%20Indonesia%20East%20Mall%2C%20Lobby%20Rama%20No.1%2C%20Menteng%2C%20Kec.%20Menteng%2C%20Kota%20Jakarta%20Pusat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2010230!5e0!3m2!1sid!2sid!4v1775656462828!5m2!1sid!2sid" 
+  width="100%" height="250"
+style="border:0;border-radius:10px;">
+</iframe>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact US </h2>
+<p>Contact us now via WhatsApp</p>
+
+<br>
+
+<a href="https://wa.me/6289505225604" 
+  target="_blank"  
+  rel="noopener noreferrer"
+  class="btn-primary">
+Contact via WhatsApp
+</a>
+</div>
+</section>
+
+<p>Copyright © 2026 ZNH. All rights reserved</p>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
